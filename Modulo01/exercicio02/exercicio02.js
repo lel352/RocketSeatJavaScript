@@ -5,18 +5,19 @@ function pares(x,y){
         index = x;
         final = y;
     } 
-    else if (y > x){
+    else if (x > y){
         index = y;
         final = x;
     }      
     else {
-        console.log(index);
+        if (x % 2 == 0) 
+           console.log(x);
         return ;
     }   
     if (index % 2 != 0)
         index++
     
-    for (index; index < final; index+=2){
+    for (index; index <= final; index+=2){
         console.log(index)
     }    
     
@@ -26,4 +27,8 @@ function pares(x,y){
     }*/
 }
 
-pares(32, 321);
+pares(53, 43);
+pares(43, 43);
+pares(54, 54);
+//pares(32, 321);
+
