@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name="nome" id="nome"/>
+        <input type="text" name="nome2"/>
+        <input type="text" name="nome3" class="nome"/>
+        <input type="text" name="nome3" class="nome"/>
+        <button class="botao">Adicionar</button>
+    </div>
+    
+    <script>
+    var inputElment = document.getElementById('nome');
+    var inputElment2 = document.getElementsByTagName('imput'); //Sempre retorna vetor 
+    var inputElment3 = document.getElementsByTagName('imput')[0]; //retorna o primero input aparecer
+    var inputElment4 = document.getElementsByClassName('nome'); //Sempre retorna vetor
+    var inputElment5 = document.getElementsByClassName('nome')[1]; //retorna o segundo input dessa classe
+
+    // querySelector permite percorer o body como desejar
+    var  inputElment6 = document.querySelector('body div#app input');// vai trazer o primeo input dentro da div#app dentro do body
+    var  inputElment7 = document.querySelector('input[name=nome]');// pegadndo via
+    var  inputElment8 = document.querySelectorAll('div#app input');// pegadndo todo os input dentro da div
+
+    var btnBotao = document.querySelector('button.botao');
+    btnBotao.onclick = function(){
+        var text = inputElment.value;
+        alert('Botao clicado '+ text);
+    }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+</head>
+<body>
+    <div id="app">
+        <input id="nome"  />
+    </div>
+    
+    <script>
+        var linkElment = document.createElement('a');
+        linkElment.setAttribute('href','https://medium.com/@lel352');
+        linkElment.setAttribute('title','medium do Leandro');
+
+        var textElement = document.createTextNode('Acessar medium de Leandro Sartor');
+        linkElment.appendChild(textElement);
+
+        var divElement = document.querySelector('div#app');
+        divElement.appendChild(linkElment);
+
+        var inputElement = document.querySelector('#nome');
+        divElement.removeChild(inputElement);
+
+    </script>
+
+</body>
+</html>
