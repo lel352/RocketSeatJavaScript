@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="texto" id="texto">
+        <button id="btnAdicionar">Adicionar</button>            
+    </div>
+    <div id="resultado"></div>
+    <script>
+          var nomes = ["Diego", "Gabriel", "Lucas"];
+          var divElement = document.querySelector('div#resultado');  
+          var btnAdicionarElement = document.querySelector('#btnAdicionar');
+          var inputTextoElement = document.querySelector('#texto');
+
+         var listaElement = document.createElement('ul');
+          for (const key in nomes) {
+              var linhaElement =  document.createElement('li');
+              linhaElement.innerHTML = nomes[key];
+              listaElement.appendChild(linhaElement);  
+          }
+          divElement.appendChild(listaElement);
+          
+          btnAdicionarElement.onclick = function(){
+              var texto = inputTextoElement.value;
+              if (texto.trim().length > 0){ 
+              var linhaElement =  document.createElement('li');
+              linhaElement.innerHTML = texto;
+              listaElement.appendChild(linhaElement);  
+              }
+              inputTextoElement.value = ''; 
+          }
+    </script>  
+</body>
+</html>

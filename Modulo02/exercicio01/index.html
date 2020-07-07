@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercico 01</title>
+</head>
+<body>
+    <div>
+        <button id="botao">Cria Quadrado</button>
+    </div>
+    <div id="quadrado"></div>
+    <script>
+        var divQuadradoElement = document.querySelector('#quadrado');
+        var btnBotaoElement = document.querySelector('#botao')
+            
+        btnBotaoElement.onclick = function(){
+            var divElement = document.createElement('div');
+            divElement.style.backgroundColor = 'red';
+            divElement.style.width = '100px';
+            divElement.style.height = '100px';
+            divQuadradoElement.appendChild(divElement);
+        }
+    </script>
+</body>
+</html>

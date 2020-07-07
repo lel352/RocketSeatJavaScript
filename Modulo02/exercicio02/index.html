@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercico 02</title>
+</head>
+
+<body>
+    <div>
+        <button id="botao">Cria Quadrado</button>
+    </div>
+    <div id="quadrado"></div>
+    <script>
+        var divQuadradoElement = document.querySelector('#quadrado');
+        var btnBotaoElement = document.querySelector('#botao');
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        btnBotaoElement.onclick = function () {
+            var divElement = document.createElement('div');
+            divElement.setAttribute('class', 'box');
+            divElement.style.backgroundColor = 'red';
+            divElement.style.width = '100px';
+            divElement.style.height = '100px';
+
+            divElement.onmouseover = function () {
+                divElement.style.backgroundColor = getRandomColor();
+            };
+
+            divQuadradoElement.appendChild(divElement);
+        }
+    </script>
+</body>
+
+</html>
