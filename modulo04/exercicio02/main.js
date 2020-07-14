@@ -5,7 +5,6 @@ var textoElement = document.querySelector('div input');
 btnAdicionarElement.onclic = function () {
     var texto = textoElement.value;
     if (texto.trim().length > 0) {
-
     }
 }
 
